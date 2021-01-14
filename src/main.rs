@@ -93,7 +93,7 @@ fn main() {
         let mut command = String::new();
         io::stdin().read_line(&mut command).unwrap();
 
-        command = command.split_whitespace().collect();
+        command = command.trim().to_string();
 
         if command == "1" {
             todo_list.print_todos();
